@@ -26,7 +26,7 @@ let globals : Globals = Globals();
 class Globals : NSObject {
     
     //->(put your variables here)
-    let example_var_0  : Int = 3;
+    @objc let example_var_0  : Int = 3;
     var example_var_1 : Int?;
 
 
@@ -55,7 +55,7 @@ class Globals : NSObject {
     //******************************************************************************************************************************//
     //												    Misc Helpers                                                                //
     //******************************************************************************************************************************//
-    func initCellTitle() -> String {
+    @objc func initCellTitle() -> String {
         return "";                                                      /* Empty at this time                                       */
     }
 }

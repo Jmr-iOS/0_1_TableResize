@@ -35,15 +35,15 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let rowHeight   : CGFloat = 75;
+    @objc let rowHeight   : CGFloat = 75;
     
-    var numRows     : Int = 1;          //changes with button interactions
-    var titleBar    : UILabel!;
+    @objc var numRows     : Int = 1;          //changes with button interactions
+    @objc var titleBar    : UILabel!;
     
-    var addButton   : UIButton!;        //upper button to add a row
-    var remButton   : UIButton!;        //upper button to remove a row
+    @objc var addButton   : UIButton!;        //upper button to add a row
+    @objc var remButton   : UIButton!;        //upper button to remove a row
     
-    var tableView   : UITableView!;
+    @objc var tableView   : UITableView!;
     
     
     
@@ -72,7 +72,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      *		x
      */
     /********************************************************************************************************************************/
-    func init_ui() {
+    @objc func init_ui() {
         
         /****************************************************************************************************************************/
         /*															TITLEBAR                                                        */
@@ -152,7 +152,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      *		x
      */
     /********************************************************************************************************************************/
-    func init_table() {
+    @objc func init_table() {
         
         //Init
         self.tableView = UITableView(frame:CGRect(x: 0, y: 80, width: UIScreen.main.bounds.width, height: self.rowHeight+10));
@@ -179,7 +179,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
 
-    func addRow(_ sender: UIButton!) {
+    @objc func addRow(_ sender: UIButton!) {
         
         print("Tootles");
         
@@ -192,7 +192,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     
-    func removeRow(_ sender: UIButton!) {
+    @objc func removeRow(_ sender: UIButton!) {
         
         print("Frootles?");
         
@@ -203,7 +203,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return;
     }
 
-    func refreshTableHeight() {
+    @objc func refreshTableHeight() {
         
         let miscYOffs : CGFloat = 80;
         
