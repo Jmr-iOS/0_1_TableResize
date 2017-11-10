@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9278AF3F8364A9D55C15D81EF5A7B885CA6AE15A" : 9223372036854775807,
+    "E5BA5395FE1941567E85CB415DCEB3BB4ECCFF78" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3C2A783D-5D6A-4146-94C6-CC957172F345",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9278AF3F8364A9D55C15D81EF5A7B885CA6AE15A" : "..",
+    "E5BA5395FE1941567E85CB415DCEB3BB4ECCFF78" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "0_1 - Table (resizing)",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "0_1 - Table (resizing).xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/justinmreina\/iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9278AF3F8364A9D55C15D81EF5A7B885CA6AE15A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/justinmreina\/iOS-pUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E5BA5395FE1941567E85CB415DCEB3BB4ECCFF78"
+    }
+  ]
+}

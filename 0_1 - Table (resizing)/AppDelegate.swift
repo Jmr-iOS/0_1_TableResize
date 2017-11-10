@@ -28,11 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?;
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds);
+        self.window = UIWindow.init(frame: UIScreen.main.bounds);
         
-        self.window?.backgroundColor = UIColor.whiteColor();
+        self.window?.backgroundColor = UIColor.white;
         
         let viewController:ViewController = ViewController();
         
@@ -47,10 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true;
     }
 
-    func applicationWillResignActive(application: UIApplication)    { return; }
-    func applicationDidEnterBackground(application: UIApplication)  { return; }
-    func applicationWillEnterForeground(application: UIApplication) { return; }
-    func applicationDidBecomeActive(application: UIApplication)     { return; }
-    func applicationWillTerminate(application: UIApplication)       { return; }
+    func applicationWillResignActive(_ application: UIApplication)    { return; }
+    func applicationDidEnterBackground(_ application: UIApplication)  { return; }
+    func applicationWillEnterForeground(_ application: UIApplication) { return; }
+    func applicationDidBecomeActive(_ application: UIApplication)     { return; }
+    func applicationWillTerminate(_ application: UIApplication)       { return; }
 }
 

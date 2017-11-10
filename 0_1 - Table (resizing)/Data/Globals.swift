@@ -38,7 +38,7 @@ class Globals : NSObject {
         super.init();
         
         //(todo) make an App Setting to check too!
-        let dispIsZoomed : Bool = (UIDevice.currentDevice().name == "Justin's iPhone");
+        let dispIsZoomed : Bool = (UIDevice.current.name == "Justin's iPhone");
         
         var zoomStat : String = "Globals.init():                        I am not zoomed";
         

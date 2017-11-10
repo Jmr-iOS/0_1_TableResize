@@ -77,37 +77,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         /****************************************************************************************************************************/
         /*															TITLEBAR                                                        */
         /****************************************************************************************************************************/
-        self.titleBar = UILabel(frame: CGRectMake(0, 20, UIScreen.mainScreen().bounds.width, 40));
+        self.titleBar = UILabel(frame: CGRect(x: 0, y: 20, width: UIScreen.main.bounds.width, height: 40));
         
         self.titleBar.text = "Adjustable Table";
-        self.titleBar.textAlignment = .Center;
-        self.titleBar.backgroundColor = UIColor.whiteColor();
+        self.titleBar.textAlignment = .center;
+        self.titleBar.backgroundColor = UIColor.white;
 
         self.view.addSubview(self.titleBar);
         
         //fill
-        let upperEww = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 20));
-        upperEww.backgroundColor = UIColor.whiteColor();
+        let upperEww = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 20));
+        upperEww.backgroundColor = UIColor.white;
         self.view.addSubview(upperEww);
 
         //border
-        let titleBarBottBorder = UIView(frame: CGRectMake(0, 60-1, UIScreen.mainScreen().bounds.width, 1));
-        titleBarBottBorder.backgroundColor = UIColor.grayColor();
+        let titleBarBottBorder = UIView(frame: CGRect(x: 0, y: 60-1, width: UIScreen.main.bounds.width, height: 1));
+        titleBarBottBorder.backgroundColor = UIColor.gray;
         self.view.addSubview(titleBarBottBorder);
 
         
         /****************************************************************************************************************************/
         /*															ADD                                                             */
         /****************************************************************************************************************************/
-        self.addButton = UIButton(frame: CGRectMake((UIScreen.mainScreen().bounds.width-30), 26, 20, 30));
+        self.addButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width-30), y: 26, width: 20, height: 30));
         
-        self.addButton.setTitle("+", forState:  .Normal);
+        self.addButton.setTitle("+", for:  UIControlState());
         
-        self.addButton.setTitleColor(UIColor.redColor(), forState: .Normal);
+        self.addButton.setTitleColor(UIColor.red, for: UIControlState());
         
-        self.addButton.titleLabel!.font =  self.addButton.titleLabel!.font.fontWithSize(30);
+        self.addButton.titleLabel!.font =  self.addButton.titleLabel!.font.withSize(30);
         
-        self.addButton.addTarget(self, action: #selector(ViewController.addRow(_:)), forControlEvents:  .TouchUpInside);
+        self.addButton.addTarget(self, action: #selector(ViewController.addRow(_:)), for:  .touchUpInside);
         
         self.view.addSubview(self.addButton);
         
@@ -115,17 +115,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         /****************************************************************************************************************************/
         /*												   		   REMOVE                                                           */
         /****************************************************************************************************************************/
-        self.remButton = UIButton(frame: CGRectMake(10, 26, 100, 30));
+        self.remButton = UIButton(frame: CGRect(x: 10, y: 26, width: 100, height: 30));
         
-        self.remButton.setTitle("-", forState:  .Normal);
+        self.remButton.setTitle("-", for:  UIControlState());
         
-        self.remButton.setTitleColor(UIColor.redColor(), forState: .Normal);
+        self.remButton.setTitleColor(UIColor.red, for: UIControlState());
         
-        self.remButton.titleLabel!.font =  self.remButton.titleLabel!.font.fontWithSize(30);
+        self.remButton.titleLabel!.font =  self.remButton.titleLabel!.font.withSize(30);
         
-        self.remButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left;
+        self.remButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left;
         
-        self.remButton.addTarget(self, action: #selector(ViewController.removeRow(_:)), forControlEvents:  .TouchUpInside);
+        self.remButton.addTarget(self, action: #selector(ViewController.removeRow(_:)), for:  .touchUpInside);
         
         self.view.addSubview(self.remButton);
         
@@ -133,7 +133,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         /****************************************************************************************************************************/
         /*															BACKGROUND                                                      */
         /****************************************************************************************************************************/
-        self.view.backgroundColor = UIColor.greenColor();
+        self.view.backgroundColor = UIColor.green;
         
         
         return;
@@ -155,19 +155,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func init_table() {
         
         //Init
-        self.tableView = UITableView(frame:CGRectMake(0, 80, UIScreen.mainScreen().bounds.width, self.rowHeight+10));
+        self.tableView = UITableView(frame:CGRect(x: 0, y: 80, width: UIScreen.main.bounds.width, height: self.rowHeight+10));
         
         self.tableView.delegate   = self;                                                            //Set both to handle clicks & provide data
         self.tableView.dataSource = self;
         
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell");
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell");
         self.tableView.translatesAutoresizingMaskIntoConstraints = false;                            //Std
         
-        self.tableView.separatorColor = .clearColor();
-        self.tableView.separatorStyle = .SingleLine;
+        self.tableView.separatorColor = .clear;
+        self.tableView.separatorStyle = .singleLine;
         
         //Safety
-        self.tableView.backgroundColor = UIColor.blackColor();
+        self.tableView.backgroundColor = UIColor.black;
         
         //Set the row height
         self.tableView.rowHeight = self.rowHeight;
@@ -179,7 +179,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
 
-    func addRow(sender: UIButton!) {
+    func addRow(_ sender: UIButton!) {
         
         print("Tootles");
         
@@ -192,7 +192,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     
-    func removeRow(sender: UIButton!) {
+    func removeRow(_ sender: UIButton!) {
         
         print("Frootles?");
         
@@ -211,7 +211,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let newHeight : CGFloat = (CGFloat(self.numRows) * self.rowHeight) + 10;
         
         
-        self.tableView.frame = CGRectMake(0, miscYOffs, UIScreen.mainScreen().bounds.width, newHeight);
+        self.tableView.frame = CGRect(x: 0, y: miscYOffs, width: UIScreen.main.bounds.width, height: newHeight);
         
         self.tableView.reloadData();
 
@@ -221,36 +221,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 /************************************************************************************************************************************/
 /*                                      UITableViewDataSource, UITableViewDelegate Interfaces                                       */
 /************************************************************************************************************************************/
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.numRows;                                                                 //return how many rows you want printed!
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!;
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!;
         
-        cell.textLabel?.text = "ABCD";                                                      //text
-        cell.textLabel?.font = UIFont(name: cell.textLabel!.font.fontName, size: 20);       //font
-        cell.textLabel?.textAlignment = NSTextAlignment.Center;                             //alignment
+        cell?.textLabel?.text = "ABCD";                                                      //text
+        cell?.textLabel?.font = UIFont(name: (cell?.textLabel!.font.fontName)!, size: 20);       //font
+        cell?.textLabel?.textAlignment = NSTextAlignment.center;                             //alignment
 
-        cell.selectionStyle = UITableViewCellSelectionStyle.Gray;   //Options are 'Gray/Blue/Default/None'
+        cell?.selectionStyle = UITableViewCellSelectionStyle.gray;   //Options are 'Gray/Blue/Default/None'
         
         if(verbose){ print("'ABCD' was added to the table"); }
         
-        return cell;
+        return cell!;
     }
     
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if(verbose){ print("ViewController.tableView():         handling a cell tap of row \(indexPath.item)"); }
         
-        tableView.deselectRowAtIndexPath(indexPath, animated:true);
+        tableView.deselectRow(at: indexPath, animated:true);
         
-        let currCell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!;
+        let currCell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!;
         
-        print("\(currCell.textLabel?.text) was pressed");
+        print("\(String(describing: currCell.textLabel?.text)) was pressed");
         
         return;
 
